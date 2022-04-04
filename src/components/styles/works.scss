@@ -1,0 +1,54 @@
+.works {
+    min-height: 100%;
+    width: 100%;
+
+}
+@media (min-width:50em) {
+    .work__section {
+        padding: 15px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+.cards {
+    position: relative;
+    cursor: pointer;
+    border: 3px solid rgb(160, 150, 150);
+
+    .img {
+        height: 100%;
+        width: 100%;
+    }
+
+    button {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: transparent;
+        border: 3px solid #fff;
+        padding: 10px 20px;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: bolder;
+        cursor: pointer;
+        opacity: 0;
+
+        &:hover {
+            background: #fff;
+            color: firebrick;
+        }
+    }
+
+    &:hover button {
+        opacity: 1;
+        transition: 500ms;
+    }
+
+    &:hover img {
+        opacity: 0.6;
+    }
+}
